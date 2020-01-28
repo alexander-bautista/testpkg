@@ -2,11 +2,13 @@ package main
 
 import (
 	"fmt"
+
+	"github.com/alexander-bautista/testpkg/routes"
+	"github.com/google/go-cmp/cmp"
 )
 
 func main() {
-	//route.Hello()
-	//fmt.Println(route.Alert("maria"))
-
-	fmt.Println("test")
+	routes.Hello()
+	fmt.Println(routes.Alert("maria"))
+	fmt.Println(cmp.Diff("Hello World", "Hello Go"))
 }
